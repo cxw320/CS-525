@@ -1,0 +1,28 @@
+'''
+Caroline Wang
+4/17/2019
+Problem 6.1
+Display the 1st 100 pentagonal numbers with 10 numbers on each line
+'''
+
+
+# what are we passing as n in the function?
+# def getPentagonalNumber(n)
+
+pent_nums = []
+
+for n in range(100):
+    pent = int(n*(3*n - 1) / 2)
+    pent_nums.append(pent)
+
+
+start_index = 0
+end_index = 10
+
+while end_index <100:
+
+    print(' '.join(str(i) for i in pent_nums[start_index:end_index]))
+    start_index += 10
+    end_index += 10
+
+
